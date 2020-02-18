@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package vip;
+
+service VIP {
+    rpc GetIsVIPByID(GetIsVIPByIDRequest) returns (GetIsVIPByIDResponse) {}
+}
+
+message GetIsVIPByIDRequest {
+    string vipID = 1;
+}
+
+message GetIsVIPByIDResponse {
+    string vipID = 1;
+    bool isVIP = 2; 
+}
+
+message VIPObject {
+    string vipID = 1;
+    bool isVIP = 2; 
+}
